@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css" integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="./Styling/home_style.css"   
+</head>
+<body>
+    <div>
+        <div id="navbar">
+                <nav>
+                    
+                    <div class="logo">
+                        <img src="https://www.pluralsight.com/etc/clientlibs/pluralsight/main/images/favicons/apple-touch-icon-57x57.png"/>
+                        <h3>PLURALSIGHT</h3>
+                    </div>
+                <ul>
+                    <li><a href="#"><i class="bi bi-book-fill"></i>Home</a></li>
+                    <li>
+                        <a href="#">Platform</a>
+                        <ul>
+                            <li><a href="course.html">Courses</a></li>
+                            <li><a href="#">Skills Assessments</a></li>
+                            <li><a href="#">Labs</a></li>
+                            <li><a href="#">Hands-on learning</a></li>
+                            <li><a href="#">Certification prep</a></li>
+                            <li><a href="#">Team efficiency</a></li>
+                            <hr>
+                            <li><a href="#">What is Skills</a></li>
+                            <li><a href="#">View plans</a></li>
+                            <li><a href="#">What is Flow</a></li>
+                            <li><a href="#">View Flow</a></li>
+                            
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Products</a>
+                        <ul>
+                            <li><a href="#">What is Skills</a></li>
+                            <li><a href="#">View plans</a></li>
+                            <li><a href="#">What is Flow</a></li>
+                            <li><a href="#">View Plans</a></li>
+                            <li>
+                                <a href="#">More</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Resources</a></li>
+                    <li><a href="#">For Individuals</a></li>
+                </ul>
+                <div id="details">
+                    <input type="text" id="query">
+                    <button id="search_button">SEARCH</button>
+                    <button  onclick="direct()" id="signin">SIGN IN</button>                 
+                </div>
+                <div id="tests"></div>
+                <div id="try">
+                    <h3>TRY FOR FREE</h3>
+                </div>
+                </nav>
+        </div>
+        <div>          
+            <img id="cover" src="https://www.pluralsight.com/content/pluralsight/en/jcr:content/main/generic_block_copy_c_1058486430/image-res.img.493fb6af-a344-4666-a2a0-6a96a118facd.jpg"/> 
+            <h1 class="text1">Build Better skills</h1>
+            <h2 class="text2">Your customers won’t settle and neither should you. With Pluralsight, technology teams know more and work better together. Develop the skills you need for your top priorities. Improve workflows with actionable data. Build better—every time.</h2>
+            <button class="button1">VIEW PLANS</button>
+            <button class="button2">VIEW PLANS</button>
+            <div id="trending_tech">
+                <div id="box1">
+                    <div>
+                        <img src="https://pluralsight2.imgix.net/paths/images/javascript-542e10ea6e.png" height="100" width="100"/>
+                        <h3>JavaScript</h3>
+                        <h4>11 Courses</h4>
+                        <p>Take a look ></p>
+                        
+                    </div>
+                    <div>
+                        <img src="https://pluralsight.imgix.net/paths/path-icons/angular-14a0f6532f.png" height="100" width="100"/>
+                        <h3>Angular</h3>
+                        <h4>14 Courses</h4>
+                        <p>Take a look ></p>
+                        
+                    </div>
+                    <div>
+                        <img src="https://pluralsight.imgix.net/paths/python-7be70baaac.png" height="100" width="100"/>
+                        <h3>Python</h3>
+                        <h4>12 Courses</h4>
+                        <p>Take a look ></p>
+                        
+                    </div>
+                    <div>
+                        <img src="https://pluralsight.imgix.net/paths/path-icons/csharp-e7b8fcd4ce.png?" height="100" width="100"/>
+                        <h3>C#</h3>
+                        <h4>19 Courses</h4>
+                        <p>Take a look ></p>
+                        
+                    </div>                   
+                </div>
+                <div id="box2">
+                    <h2>TRENDING TECHNOLOGIES</h2>
+                    <h3>Popular topics</h3>
+                    <h3>to learn now</h3>
+                    <p>Not sure what technologies to focus on? The Technology Index ranks 850+ technologies by their relative popularity. See what’s topping the charts and get recommended courses to skill up.</p>
+                    <h4>View the index ></h4>
+                </div>
+            </div>     
+            <div id="features">
+                <h2>SEE WHAT"S NEW</h2>
+                <h1>Our latest features</h1>
+                <div id="f2">
+                    <div id="box3">
+                        <h1>SKILLS</h1>
+                        <h2>Create better cloud outcomes with hands-on experience</h2>
+                        <p>Your teams need the right skills and a place to practice to ensure they’re ready to deliver on your cloud objectives. Labs enable learners to get hands-on practice in a provisioned cloud environment in AWS, Azure and Google Cloud (Google Cloud powered by Quiklabs).</p>
+                        <h3>Learn more ></h3>
+                    </div>
+                    <div id="img1">
+                        <img src="https://www.pluralsight.com/content/dam/pluralsight2/homepage/Cloud-labs-image2x.png" width="550" height="350"/>
+                    </div>
+                </div>
+                <div id="clear"></div>
+                <div id="boxes">
+                    <div>
+                        <img src="https://www.pluralsight.com/etc/clientlibs/pluralsight/main/images/favicons/apple-touch-icon-57x57.png"/>
+                        <h3>CERTIFICATION PREP</h3>
+                        <h1>Empower your teams to grow their skills and their careers</h1>
+                        <p>Prepare your team for certification exams with our expert authored content and practice exams.</p>
+                        <h4>Learn more ></h4>
+                    </div>
+                    <div>
+                        <img src="https://www.pluralsight.com/etc/clientlibs/pluralsight/main/images/favicons/apple-touch-icon-57x57.png"/>
+                         <h3>DELIVERY MODULE</h3>
+                        <h1>Make lasting workflow improvements with insights from your Jira data</h1>
+                        <p>Go beyond Jira data and get visibility into what’s happening within your user stories, tasks and bugs. Flow’s delivery module helps you better understand how your team is working and can make lasting improvements to your workflow.</p>
+                        <h4>Learn more ></h4>
+                    </div>
+                    <div>
+                        <img src="https://www.pluralsight.com/etc/clientlibs/pluralsight/main/images/favicons/apple-touch-icon-57x57.png"/>
+                         <h3>SANDBOXES</h3>
+                        <h1>Utilize a space for unrestricted exploration</h1>
+                        <p>Sandboxes gives your team a safe environment to practice what they're learning from expert-authored courses.</p>
+                        <h4>Learn more ></h4>
+                    </div>
+                </div>
+            </div> 
+            <div id="free">
+                <h1>KEEP UP TO DATE</h1>
+                <h2>Discover more about Pluralsight</h2>
+                <div id="discover">
+                    <div>
+                        <img src="https://www.pluralsight.com/content/dam/pluralsight2/homepage/momentInTime-compareOnlineCourseProviders.png" width="300" height="180"/>
+                        <h1>COMPARE ONLINE COURSE PROVIDERS</h1>
+                        <h2>Unbiased reviews to help you make the right decision for your team</h2>
+                    </div>
+                    <div>
+                        <img src="https://www.pluralsight.com/content/dam/pluralsight2/homepage/momentInTime-whichProductForYou.png" width="300" height="180"/>
+                        <h1>WHICH TECH SKILL DEVELOPMENT PRODUCT IS RIGHT FOR YOU?</h1>
+                        <h2>Reduce decision fatigue with helpful data based on your peers’ experiences</h2>
+                    </div>
+                    <div>
+                        <img src="https://www.pluralsight.com/content/pluralsight/en/jcr:content/main/generic_block_135160/parsys/columns/column-parsys-1/flex_block/parsys/flex_open_block/parsys/image/image-res.img.34c07a38-9cfe-43e1-8c28-d63316b1d13c.jpg" width="300" height="180"/>
+                        <h1> WHAT IS PLURALSIGHT SKILLS?</h1>
+                        <h2>Discover the fastest, most effective path to developing technology skills.</h2>
+                    </div>
+                    <div>
+                        <img src="https://www.pluralsight.com/content/pluralsight/en/jcr:content/main/generic_block_135160/parsys/columns/column-parsys-1/flex_block/parsys/flex_open_block_copy_1875049544/parsys/image/image-res.img.9121be6d-ee05-4805-a8ee-cf60f81c7cb5.jpg" width="300" height="180"/>
+                        <h1>CREATE YOUR FREE ACCOUNT</h1>
+                        <h2>Build new tech skills on us with free access to 50+ expert-led courses, assessments and more.</h2>
+                    </div>
+                </div>
+            </div>
+            <div id="story">
+                <div>
+                    <img src="https://www.pluralsight.com/content/pluralsight/en/teach/jcr:content/main/generic_block_342515434/parsys/columns/column-parsys-1/image/image-res.img.9f7006c3-cdde-4b65-a730-61d13d28deb3.jpg" width="650" height="600"/>
+                </div>
+                <div>
+                    <img class="fish"; src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQoAAAC+CAMAAAD6ObEsAAAAA1BMVEUApd9iZrozAAAASElEQVR4nO3BMQEAAADCoPVPbQ0PoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADeDcYqAAE00FRDAAAAAElFTkSuQmCC" width="699" height="600" />
+                    <img class="fishes ;"src="https://www.pluralsight.com/content/pluralsight/en/jcr:content/main/targeted_section/targeted-parsys-customer-types-1/generic_block/parsys/columns/column-parsys-2/generic_block_1680525755/parsys/columns/column-parsys-1/image_copy/image-res.img.52595908-6fc8-4f48-b564-b27d95f24adf.png"/>
+                    <h2 class="text"> Ryan Chasteauneuf had always dreamed of being a soldier. After disaster struck in Afghanistan, he was forced to abandon his lifelong dream and start over. Driven to achieve in the face of adversity, he turned to Pluralsight to upskill.</h2>
+                    <button class="ryan">SEE RYAN'S STORY</button>
+                </div>
+            </div>
+            <div id="clear"></div>
+            <div id="in">
+                <h1>Insights that give you an edge</h1>
+                <div id="button3">
+                    <button>TRY FOR FREE</button>
+                </div>
+            </div>
+            <div id="growth">
+                <img src="https://images.unsplash.com/photo-1560622972-b7d7ca2dd95c?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fHBvdmVydHl8ZW58MHwwfDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=590" width="1400" height="550"/>
+                <h1>See our growth, progress and evolution</h1>
+                <p>At Pluralsight, we see first-hand every day how technology makes the impossible, possible. It’s why Pluralsight One exists: To advance our mission of democratizing technology skills, challenging assumptions about solutions and create significant, lasting social impact.</p>
+                <div id="button4">
+                    <button>FOR NONPROFITS</button>
+                </div>
+            </div>
+            <div id="end">
+                <div id="solutions">
+                    <div>
+                        <h2>SOLUTIONS</h2>
+                        <p>Pluralsight Skills</p>
+                        <p>Pluralsight Flow</p>
+                        <p>Government</p>
+                        <p>Gift of Pluralsight</p>
+                        <p>View Pricing</p>
+                        <p>Contact Sales</p>
+                        <p>Skill up for free</p>
+                    </div>
+                    <div>
+                        <h2>PLATFORM</h2>
+                        <p>Browse library</p>
+                        <p>Role IQ</p>
+                        <p>Skill IQ</p>
+                        <p>Iris</p>
+                        <p>Authors</p>
+                        <p>Professional Services</p>
+                        <p>Technology Index</p>
+                    </div>
+                    <div>
+                        <h2>COMPANY</h2>
+                        <p>About us</p>
+                        <p>Customer stories</p>
+                        <p>Careers</p>
+                        <p>Blog</p>
+                        <p>Newsroom</p>
+                        <p>Resource center</p>
+                        <p>Guides</p>
+                    </div>
+                    <div>
+                        <h2>RESOURCES</h2>
+                        <p>Download Pluralsight</p>
+                        <p>Events</p>
+                        <p>Teach</p>
+                        <p>Partners</p>
+                        <p>Affiliate Partners</p>
+                        <p>PluralsightOne.org</p>
+                        <p>Subscribe</p>
+                    </div>
+                    <div>
+                        <h2>SUPPORT</h2>
+                        <p>Contact</p>
+                        <p>Help center</p>
+                        <p>IP whitelist</p>
+                        <p>Sitemap</p>
+                    </div>
+
+                </div>
+                <div id="clear"></div>
+                <hr style="width:78%;text-align:center;margin-left:120px;margin-top: 80px; background: gray; ">
+                <div id="language">
+                    <img src="https://www.pluralsight.com/content/dam/pluralsight2/icons/globe-white.png"/>
+                    <p>Deutsch</p>
+                    <p>English</p>
+                    <p>French</p>
+                </div>
+                <hr style="width:78%;text-align:center;margin-left:120px;margin-top: 25px; background: gray; ">
+                <div id="last">
+                    <img id="globe_img" src="https://www.pluralsight.com/content/dam/pluralsight2/general/icons/light/ps-icon.png"/>
+                    <p>Copyright © 2004 - 2021 Pluralsight LLC. All rights reserved</p>
+                    <h5>Terms of Use</h5>
+                    <h4>Privacy Policy</h4>
+                    <div id="social">
+                         <img src="https://www.pluralsight.com/etc/clientlibs/pluralsight/main/images/icons/desktop/Facebook_Icon.svg"/>
+                         <img src="https://www.pluralsight.com/etc/clientlibs/pluralsight/main/images/icons/desktop/Instagram_Icon.svg"/>
+                         <img src="https://www.pluralsight.com/etc/clientlibs/pluralsight/main/images/icons/desktop/Twitter_Icon.svg"/>
+                         <img src="https://www.pluralsight.com/etc/clientlibs/pluralsight/main/images/icons/desktop/YouTube_Icon.svg"/>  
+                    </div>
+                    
+                
+                </div>
+            </div>
+
+        </div>
+    </div>
+    
+</body>
+</html>
+<script>
+     function direct()
+    {
+        document.location.href="signup_api.html";
+    }
+    let final= document.createElement("p");
+    final.innerText=localStorage.getItem("values");
+    console.log("final", final);
+    let d=document.getElementById("signin");
+    d.innerText=null;
+    d.append(final.innerText);
+</script>

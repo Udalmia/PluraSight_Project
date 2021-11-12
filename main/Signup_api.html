@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;1,600&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        *{
+            background-color: black;
+        }
+        #signup{
+            background-color: black;
+            height: 700px;
+            width: 550px;
+            margin: 0%;
+            float: left;
+            padding: 0px 0px;
+        }
+        #signup-form > img{
+            padding: 40px 60px;
+            float: left;
+            padding-right: 25px;
+        }
+        #signup-form > h1{
+            color: white;
+            padding: 80px;
+            padding-top: 60px;
+            padding-left: 10px ;
+            font-weight: 600;
+            padding-bottom: 50px;
+        }
+        #signup-form div  > input{
+            width: 200px;
+            height: 30px;
+            text-align: center;
+            background: black;
+            border: 1px solid gray;
+            color: white;
+        }
+        #signup-form > div{
+            padding-left: 155px;
+        }
+        #clear{
+            clear: both;
+        }
+        #img1 > h1{
+            color: white;
+            position: absolute;
+            top: 200px;
+            left: 800px;
+            background: none;
+            font-weight: 600;
+            font-size: 50px;
+        }
+        #img1 > h3{
+            color: white;
+            position: absolute;
+            top: 300px;
+            left: 700px;
+            background: none;
+            font-weight: 400;
+            font-size: 30px;
+            right: 100px;          
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div id="signup">
+            <form onsubmit="Signup(event)" id="signup-form">
+                <img src="https://www.pluralsight.com/etc/clientlibs/pluralsight/main/images/favicons/apple-touch-icon-57x57.png" height="80" width="80"/>
+                <h1>P L U R A L S I G H T</h1>
+               <div>
+                <input type="text" id="name" placeholder="Name"/><br><br><br>
+               </div>
+                <div>
+                    <input type="email" id="email" placeholder="Email"/><br><br><br>
+                </div>
+                <div>
+                    <input type="username" id="username" placeholder="Username"/><br><br><br>
+                </div>
+                <div>
+                    <input type="password" id="password" placeholder="Password"/><br><br><br>
+                </div>
+                <div>
+                    <input type="number" id="mobile" placeholder="Mobile"/><br><br><br>
+                </div>
+               <div>
+                <input type="text" id="description" placeholder="Description"/><br><br><br>
+               </div>
+                <div>
+                    <input type="submit" placeholder="Submit"/>
+                </div>
+            </form>
+        </div>
+        <div id="img1">
+            <img src="https://app.pluralsight.com/id/img/login-bg.jpg"width="782" height="700"/>
+            <h1>You're all set!</h1>
+            <h3>Verify your email and then log in with your email and password to take the assessment.</h3>
+        </div>
+        <div id="clear"></div>
+    </div>
+</body>
+</html>
+<script>
+    function Signup(e)
+    {
+        e.preventDefault();
+        let form=document.getElementById("signup-form");
+        let user_data={
+            name: form.name.value,
+            email: form.email.value,
+            username:form.username.value,
+            password:form.password.value,
+            mobile:form.mobile.value,
+            description:form.description.value
+        };
+       // console.log("user_data:", user_data);
+       user_data=JSON.stringify(user_data);
+       fetch("https://masai-api-mocker.herokuapp.com/auth/register",{
+           method: "POST",
+           body:user_data,
+           headers:{
+               "Content-Type": "application/json",
+           },
+       })
+       .then((res)=> {
+           return res.json();
+       })
+       .then((res)=>{
+           console.log("res",res);
+           document.location.href="login.html"
+       })
+       .catch((err)=> {
+           console.log("err:",err);
+       });
+    }
+    
+</script>

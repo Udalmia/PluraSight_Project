@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            background-color: black;
+        }
+        #login{
+            background-color: black;
+            height: 700px;
+            width: 550px;
+            margin: 0%;
+            float: left;
+            padding: 0px 0px;
+        }
+        #login-form > img{
+            padding: 40px 60px;
+            float: left;
+            padding-right: 25px;
+        }
+        #login-form > h1{
+            color: white;
+            padding: 80px;
+            padding-top: 60px;
+            padding-left: 10px ;
+            font-weight: 600;
+            padding-bottom: 50px;
+        }
+        #login-form div  > input{
+            width: 200px;
+            height: 30px;
+            text-align: center;
+            background: black;
+            border: 1px solid gray;
+            color: white;
+        }
+        #login-form > div{
+            padding-left: 155px;
+        }
+        #clear{
+            clear: both;
+        }
+        #img1 > h1{
+            color: white;
+            position: absolute;
+            top: 200px;
+            left: 800px;
+            background: none;
+            font-weight: 600;
+            font-size: 50px;
+        }
+        #img1 > h3{
+            color: white;
+            position: absolute;
+            top: 300px;
+            left: 700px;
+            background: none;
+            font-weight: 400;
+            font-size: 30px;
+            right: 100px;          
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div id="login">
+            <form onsubmit="Login(event)" id="login-form">
+                <img src="https://www.pluralsight.com/etc/clientlibs/pluralsight/main/images/favicons/apple-touch-icon-57x57.png" height="80" width="80"/>
+                <h1>P L U R A L S I G H T</h1>
+                <div>
+                    <input type="username" id="user" placeholder="Username"/><br><br><br>
+                </div>
+                <div>
+                    <input type="password" id="pass" placeholder="Password"/><br><br><br>
+                </div>
+                <div>
+                    <input type="submit"/>
+                </div>
+            </form>
+        </div>
+        <div id="img1">
+            <img src="https://app.pluralsight.com/id/img/login-bg.jpg"width="782" height="700"/>
+            <h1>You're all set!</h1>
+            <h3>Log In with your email and password.</h3>
+        </div>
+        <div id="clear"></div>
+    </div>
+</body>
+</html>
+<script>
+    function Login(e){
+        e.preventDefault();
+        let form=document.getElementById("login-form");
+        let user_data={
+            username:form.user.value,
+            password:form.pass.value,
+        };
+        //console.log("user_data:", user_data);
+        let data_to_send=JSON.stringify(user_data);
+        //console.log("data_to_send:", data_to_send);
+        fetch("https://masai-api-mocker.herokuapp.com/auth/login", {
+            method: "POST",
+            body: data_to_send,
+            headers:{
+                "Content-Type":"application/json",
+            },
+        })
+        .then((res)=> {
+           return res.json();
+       })
+       .then((res)=>{
+           console.log("res",res);
+           fetchmyData(user_data.username,res.token)
+       })
+       .catch((err)=> {
+           console.log("err:",err);
+       });
+
+    }
+    function fetchmyData(username,token)
+    {
+        fetch(`https://masai-api-mocker.herokuapp.com/user/${username}`,{
+            headers:{
+                "Content-Type": "application/json",
+                Authorization:`Bearer ${token}`,
+            },
+        })
+        .then((res) => {
+            return res.json();
+        })
+        .then((res)=>{
+            console.log("res:",res);
+            details(res)
+            
+        })
+        .catch((err) => {
+            console.log("err:",err);
+        });
+    }
+    //let container=document.getElementById("test");
+    function details(data)
+    {
+        //container.innerHTML=null;
+       // let div= document.createElement("div");
+        let name1 =document.createElement("p");
+        name1.innerText=data.name;
+       // div.append(name1);
+       // container.append(div);
+        localStorage.setItem("values", name1.innerText);
+        document.location.href="home.html"
+        console.log("ress", name1.innerText);
+        return false;
+    }
+</script>
